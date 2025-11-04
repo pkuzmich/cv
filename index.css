@@ -107,6 +107,10 @@ a:hover {
     }
 }
 
+.column--contacts {
+    flex: 4;
+}
+
 .secondary {
     color: var(--text-secondary);
 }
@@ -133,7 +137,12 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.experience-list>li {
+.experience-list {
+    list-style-type: square;
+    padding-left: 1rem;
+}
+
+.experience-list > li {
     margin-bottom: 24px;
 }
 

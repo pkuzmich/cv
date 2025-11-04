@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.6;
+
+    --text-secondary: #888888;
+}
+
+header {
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 2.5em;
+}
+
+h2 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+h3.skill-category {
+    font-size: 1.1em;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.value-prop {
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.cta-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cta:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.cta-primary {
+    background-color: #000;
+    color: #fff;
+}
+
+main {
+    width: 80%;
+    max-width: 1000px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex: 1;
+}
+
+.secondary {
+    color: var(--text-secondary);
+}
+
+.job-title {
+    font-size: 1.2em;
+    text-align: start;
+}
+
+.job-header {
+    margin-bottom: 4px;
+}
+
+.date-range {
+    font-size: 0.95em;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.tech-stack {
+    font-size: 0.9em;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.experience-list>li {
+    margin-bottom: 24px;
+}
+
+.labeled-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.labeled-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+}
+
+.label {
+    min-width: 120px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    min-width: 120px;
+}
+
+button:hover {
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -2px);
+}
+
+#printPage {
+    top: 20px;
+}
+
+@media print {
+    body {
+        font-size: 11px;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        margin-top: 16px;
+    }
+
+    main {
+        width: 100%;
+        max-width: unset;
+    }
+
+    footer,
+    button {
+        display: none;
+    }
+
+    .experience-list>li {
+        margin-bottom: 16px;
+        page-break-inside: avoid;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}

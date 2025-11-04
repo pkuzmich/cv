@@ -152,7 +152,7 @@ a:hover {
 }
 
 .labeled-list li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     display: flex;
     align-items: baseline;
 }

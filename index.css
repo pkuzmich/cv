@@ -18,7 +18,7 @@ header {
 
 h1 {
     margin-bottom: 8px;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 h2 {
@@ -85,7 +85,12 @@ a:hover {
 
 .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: 600px) {
+        flex-direction: row;
+    }
 }
 
 .column {
@@ -94,12 +99,11 @@ a:hover {
 
 .column--photo {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
 
-    @media screen and (max-width: 619px) {
-        display: none;
+    @media (min-width: 600px) {
+        justify-content: flex-end;
     }
 }
 

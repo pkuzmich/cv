@@ -92,6 +92,17 @@ a:hover {
     flex: 1;
 }
 
+.column--photo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+
+    @media screen and (max-width: 619px) {
+        display: none;
+    }
+}
+
 .secondary {
     color: var(--text-secondary);
 }
@@ -138,6 +149,11 @@ a:hover {
     color: var(--text-secondary);
     font-weight: 600;
     flex-shrink: 0;
+}
+
+.title {
+    border-bottom: 1px solid var(--text-secondary);
+    padding-bottom: 4px;
 }
 
 button {
